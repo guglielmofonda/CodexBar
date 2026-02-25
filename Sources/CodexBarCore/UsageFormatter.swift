@@ -145,13 +145,13 @@ public enum UsageFormatter {
         return formatter.string(from: NSNumber(value: value)) ?? "\(value)"
     }
 
-    nonisolated(unsafe) private static let creditEventSummaryDateFormatter: DateFormatter = {
+    private static let creditEventSummaryDateFormatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .medium
         return f
     }()
 
-    nonisolated(unsafe) private static let creditEventCompactDateFormatter: DateFormatter = {
+    private static let creditEventCompactDateFormatter: DateFormatter = {
         let f = DateFormatter()
         f.dateFormat = "MMM d"
         return f

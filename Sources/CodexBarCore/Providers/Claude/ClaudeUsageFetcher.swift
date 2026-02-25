@@ -809,7 +809,7 @@ public struct ClaudeUsageFetcher: ClaudeUsageFetching, Sendable {
             rawText: nil)
     }
 
-    nonisolated(unsafe) private static let resetDateFormatter: DateFormatter = {
+    private static let resetDateFormatter: DateFormatter = {
         let f = DateFormatter()
         f.dateFormat = "MMM d 'at' h:mma"
         f.locale = Locale(identifier: "en_US_POSIX")
